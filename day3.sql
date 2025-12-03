@@ -45,7 +45,7 @@ WHERE book_title = 'The War of the Worlds';
 
 UPDATE books
 SET author_id = (SELECT author_id FROM authors WHERE author_name = 'Jane Austen')
-WHERE book_title IN ('Pride and Prejudice', 'Emma');
+WHERE book_title IN ('Pride and Prejudice', 'Emma'); -- use IN for multple options
 
 SELECT * FROM books
 ORDER BY book_id;
