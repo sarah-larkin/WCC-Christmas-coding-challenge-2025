@@ -13,7 +13,8 @@
 -- WHERE quantity_in_stock = 0;
 
 DELETE FROM books
-WHERE quantity_in_stock = 0; 
+WHERE quantity_in_stock = 0
+RETURNING *;                -- will list the deleted items
 
 -- SELECT * FROM books;
 
@@ -23,12 +24,12 @@ WHERE quantity_in_stock = 0;
 -- SELECT * FROM books
 -- WHERE quantity_in_stock > 10;
 
+
 UPDATE books
 SET price_in_pence = price_in_pence * 0.9
-WHERE quantity_in_stock > 10
-ORDER BY book_id ASC; 
+WHERE quantity_in_stock > 10; 
 
--- SELECT * FROM books
--- ORDER BY book_id ASC;
+SELECT * FROM books
+ORDER BY book_id ASC;
 
 
