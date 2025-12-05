@@ -54,7 +54,7 @@ ALTER TABLE books
 
 ALTER TABLE books
     ADD CONSTRAINT fk_author_id
-    FOREIGN KEY (author_id) REFERENCE authors (author_id);
+    FOREIGN KEY (author_id) REFERENCES authors (author_id);
 
 SELECT * FROM books;
 
