@@ -15,3 +15,4 @@ Challenge organised through Women Coding Community. Practice coding challenges f
 - Day 3: updated table, subqueries
 - Day 4: joins, new table creation
 - Day 5: junction table + queries, aggregate queries
+- Day 6: aggregate queries, handling deletion
