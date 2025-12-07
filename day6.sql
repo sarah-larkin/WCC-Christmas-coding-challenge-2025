@@ -21,7 +21,7 @@ HAVING genres.genre LIKE 'children''s';
 -- all of the associated records in the books_genres table should get deleted too.
 ------------------------------------------------------------------------------------
 
---update books_genres table from day5.sql --> on delete cascade
+--update books_genres table from day5_table.sql --> on delete cascade
 
 DELETE FROM books
 WHERE book_title = 'Emma'

@@ -3,9 +3,9 @@
 --run: psql -f 02_tables.sql 
 -----------------------------------
 
-DROP TABLE books CASCADE;
+DROP TABLE IF EXISTS books;
 
-CREATE TABLE books(
+CREATE TABLE IF NOT EXISTS books(
     book_id SERIAL PRIMARY KEY,
     book_title TEXT NOT NULL,
     price_in_pence INT,
@@ -35,7 +35,7 @@ VALUES
 ('A Brief History of Time',825,0,'1988-04-01',false),
 ('Pride and Prejudice',699,4,'1813-01-28',true);
 
--- SELECT * FROM books;
+SELECT * FROM books;
 
 ------------------------------------------------------------------
 -- QUERY

@@ -4,15 +4,14 @@
 -- -- Add Auther table to bookshop DB with unique id, name, and fun fact
 -- ----------------------------------------------------------------------
 
-DROP TABLE authors;  -- will append every time if you don't drop 
+DROP TABLE IF EXISTS authors;  -- will append every time if you don't drop 
 
-CREATE TABLE authors(
+CREATE TABLE IF NOT EXISTS authors(
     author_id SERIAL PRIMARY KEY,
     author_name VARCHAR(75),
     fun_fact TEXT
 );
 
--- SELECT * FROM authors;
 
 
 -- -- Add detail to the Authors table 
@@ -39,23 +38,12 @@ VALUES
 ('Jane Austen', 'The author of her first novel, Sense and Sensibility, was simply "A Lady", and her later works like Pride and Prejudice were credited to "the Author of Sense and Sensibility". She wasn''t named as the author of her novels until after her death!'),
 ('Margaret Atwood', 'Atwood was the first author to contribute to The Future Library Project, which will take one writer''s contribution each year for one hundred years to be printed in the year 2114.');
 
--- SELECT * FROM authors;
+SELECT * FROM authors;
 
 -- -- use \q to escape the terminal if needed
 
 
 
--- -- Alter books table to link the book to it's author --> FK 
--- -------------------------------------------------------------
--- -- https://blog.devart.com/postgresql-foreign-key.html#Add-Foreign-Key-to-an-existing-table
 
-ALTER TABLE books
-    ADD COLUMN IF NOT EXISTS author_id INT;  --must specify data type 
-
-ALTER TABLE books
-    ADD CONSTRAINT fk_author_id
-    FOREIGN KEY (author_id) REFERENCES authors (author_id);
-
-SELECT * FROM books;
 
 

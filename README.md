@@ -16,3 +16,4 @@ Challenge organised through Women Coding Community. Practice coding challenges f
 - Day 4: joins, new table creation
 - Day 5: junction table + queries, aggregate queries
 - Day 6: aggregate queries, handling deletion
+- Day 7: handling deletions + cascade, array_agg() func

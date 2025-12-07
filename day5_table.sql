@@ -16,7 +16,7 @@ DROP TABLE books_genres;
 CREATE TABLE IF NOT EXISTS books_genres(
     id SERIAL PRIMARY KEY,
     book_id INTEGER REFERENCES books(book_id) ON DELETE CASCADE,
-    genre_id INTEGER REFERENCES genres(genre_id)
+    genre_id INTEGER REFERENCES genres(genre_id) 
 );
 
 INSERT INTO books_genres

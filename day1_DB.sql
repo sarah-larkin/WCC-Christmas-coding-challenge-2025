@@ -1,3 +1,5 @@
+DROP DATABASE bookshop;
+
 CREATE DATABASE bookshop;
 
--- run with psql -f 01_DB.sql 
+-- run with psql -f day1_DB.sql  
