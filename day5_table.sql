@@ -11,7 +11,7 @@
 
 --book can have many genres and each genres could have many books 
 
-DROP TABLE books_genres;
+DROP TABLE IF EXISTS books_genres;
 
 CREATE TABLE IF NOT EXISTS books_genres(
     id SERIAL PRIMARY KEY,

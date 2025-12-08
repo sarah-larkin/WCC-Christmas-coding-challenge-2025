@@ -1,5 +1,9 @@
+\c bookshop
+
 -- Create a new table with id and genre
 ----------------------------------------------------
+
+DROP TABLE IF EXISTS genres;
 
 CREATE TABLE IF NOT EXISTS genres (
     genre_id SERIAL PRIMARY KEY,

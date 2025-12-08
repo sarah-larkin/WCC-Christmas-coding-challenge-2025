@@ -17,7 +17,7 @@
 -- WHERE author_name LIKE 'Beatrix Potter'
 -- RETURNING *; 
 
--- SELECT * FROM books;
+SELECT * FROM books;
 
 
 -- Use the ARRAY_AGG() function to get a list of each book in a single row, 

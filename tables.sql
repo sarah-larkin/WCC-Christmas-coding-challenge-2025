@@ -4,3 +4,4 @@
 -- SELECT * FROM authors;
 -- SELECT * FROM genres;
 -- SELECT * FROM books_genres;
+-- SELECT * FROM reviews;
