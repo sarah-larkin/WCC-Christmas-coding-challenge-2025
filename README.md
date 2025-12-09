@@ -18,3 +18,4 @@ Challenge organised through Women Coding Community. Practice coding challenges f
 - Day 6: aggregate queries, handling deletion
 - Day 7: handling deletions + cascade, array_agg() func
 - Day 8: create review table and query
+- Day 9: query review table with UNION ALL and RANK()

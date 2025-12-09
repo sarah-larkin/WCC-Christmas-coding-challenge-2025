@@ -11,7 +11,7 @@
 
 DROP TABLE IF EXISTS reviews;
 
-CREATE TABLE reviews (
+CREATE TABLE IF NOT EXISTS reviews (
     review_id SERIAL PRIMARY KEY,
     rating INT,
     review TEXT,
