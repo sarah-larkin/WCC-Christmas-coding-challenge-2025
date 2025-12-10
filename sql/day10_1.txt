@@ -1,0 +1,10 @@
+You are now connected to database "bookshop" as user "slark".
+              book_title              | average_rating 
+--------------------------------------+----------------
+ Pride and Prejudice                  |           6.00
+ The Little Prince                    |           5.50
+ Nineteen Eighty-Four: A Novel        |           7.33
+ The Hitchhiker's Guide to the Galaxy |           5.67
+ The Handmaid's Tale                  |           7.00
+(5 rows)
+
