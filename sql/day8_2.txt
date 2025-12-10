@@ -1,0 +1,6 @@
+You are now connected to database "bookshop" as user "slark".
+     book_title      | average_rating 
+---------------------+----------------
+ Pride and Prejudice |           6.00
+(1 row)
+

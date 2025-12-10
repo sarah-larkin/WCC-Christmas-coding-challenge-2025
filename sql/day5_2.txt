@@ -1,0 +1,29 @@
+You are now connected to database "bookshop" as user "slark".
+    book_title     |   genre    
+-------------------+------------
+ The Little Prince | children's
+ The Little Prince | classic
+(2 rows)
+
+   genre    |        book_title        
+------------+--------------------------
+ children's | The Little Prince
+ children's | The Tale of Peter Rabbit
+(2 rows)
+
+       author_name        | total_books 
+--------------------------+-------------
+ H. G. Wells              |           1
+ George Orwell            |           1
+ Beatrix Potter           |           1
+ Margaret Atwood          |           1
+ Jane Austen              |           2
+ Antoine de Saint-Exupéry |           1
+ Douglas Adams            |           1
+(7 rows)
+
+   genre   |    average_price     
+-----------+----------------------
+ dystopian | 809.0000000000000000
+(1 row)
+

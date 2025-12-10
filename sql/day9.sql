@@ -49,6 +49,3 @@ WHERE high = 1 or low = 1;
 
 
 
-
--- Query List all books above a certain average rating.
----------------------------------------------------------

@@ -1,0 +1,12 @@
+You are now connected to database "bookshop" as user "slark".
+   genre    |    average_price     
+------------+----------------------
+ children's | 584.0000000000000000
+(1 row)
+
+ book_id | book_title | price_in_pence | quantity_in_stock | release_date | is_fiction | author_id 
+---------+------------+----------------+-------------------+--------------+------------+-----------
+       4 | Emma       |            470 |               390 | 1815-12-23   | t          |        14
+(1 row)
+
+DELETE 1

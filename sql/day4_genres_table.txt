@@ -1,0 +1,16 @@
+You are now connected to database "bookshop" as user "slark".
+DROP TABLE
+CREATE TABLE
+INSERT 0 8
+ genre_id |      genre      
+----------+-----------------
+        1 | science fiction
+        2 | children's
+        3 | romance
+        4 | fantasy
+        5 | dystopian
+        6 | science
+        7 | adventure
+        8 | classic
+(8 rows)
+

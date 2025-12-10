@@ -1,0 +1,26 @@
+You are now connected to database "bookshop" as user "slark".
+DROP TABLE
+CREATE TABLE
+INSERT 0 18
+ review_id | rating |                 review                 | book_id 
+-----------+--------+----------------------------------------+---------
+         1 |     10 | Best book ever                         |       1
+         2 |      5 | Distinctly average                     |       1
+         3 |      2 | Bit boring                             |       1
+         4 |      4 | ok                                     |       2
+         5 |      7 | beautiful read                         |       2
+         6 |      4 | difficult read                         |       5
+         7 |     10 | blew my mind                           |       5
+         8 |      8 | great concept, slow read               |       5
+         9 |     10 | must read                              |       6
+        10 |      3 | unrealistic                            |       6
+        11 |      6 | interesting concept, but not enjoyable |       6
+        12 |      9 | scary one                              |       6
+        13 |      2 | too long                               |       7
+        14 |      8 | great read                             |       7
+        15 |      2 | slow and boring                        |      10
+        16 |     10 | timeless classic                       |      10
+        17 |      8 | heartwarming romance                   |      10
+        18 |      4 | slow                                   |      10
+(18 rows)
+

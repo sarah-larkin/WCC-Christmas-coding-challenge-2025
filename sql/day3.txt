@@ -1,0 +1,20 @@
+You are now connected to database "bookshop" as user "slark".
+UPDATE 1
+UPDATE 1
+UPDATE 1
+UPDATE 1
+UPDATE 1
+UPDATE 1
+UPDATE 2
+ book_id |              book_title              | price_in_pence | quantity_in_stock | release_date | is_fiction | author_id 
+---------+--------------------------------------+----------------+-------------------+--------------+------------+-----------
+       1 | The Hitchhiker's Guide to the Galaxy |            809 |               560 | 1997-10-12   | t          |         3
+       2 | The Little Prince                    |            629 |              1020 | 1943-04-06   | t          |         2
+       3 | The Tale of Peter Rabbit             |            539 |              1000 | 1902-10-01   | t          |         7
+       4 | Emma                                 |            470 |               390 | 1815-12-23   | t          |        14
+       5 | Nineteen Eighty-Four: A Novel        |            719 |               420 | 1949-06-08   | t          |        13
+       6 | The Handmaid's Tale                  |            899 |                10 | 1985-08-01   | t          |        15
+       7 | The War of the Worlds                |            225 |                17 | 1897-04-01   | t          |        12
+      10 | Pride and Prejudice                  |            699 |                 4 | 1813-01-28   | t          |        14
+(8 rows)
+

@@ -1,0 +1,25 @@
+You are now connected to database "bookshop" as user "slark".
+              book_title              |       author_name        
+--------------------------------------+--------------------------
+ The Hitchhiker's Guide to the Galaxy | Douglas Adams
+ The Little Prince                    | Antoine de Saint-Exupéry
+ The Tale of Peter Rabbit             | Beatrix Potter
+ Nineteen Eighty-Four: A Novel        | George Orwell
+ The Handmaid's Tale                  | Margaret Atwood
+ The War of the Worlds                | H. G. Wells
+ Pride and Prejudice                  | Jane Austen
+ Emma                                 | Jane Austen
+(8 rows)
+
+    author_name     
+--------------------
+ Louis de Bernières
+ Frank Herbert
+ Eric Carle
+ C. S. Lewis
+ J. D. Salinger
+ Stephen Hawking
+ Dan Brown
+ Roald Dahl
+(8 rows)
+
