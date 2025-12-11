@@ -1,0 +1,47 @@
+You are now connected to database "bookshop" as user "slark".
+    user_name    |                                                all_reviews                                                
+-----------------+-----------------------------------------------------------------------------------------------------------
+ Julia Bennett   | {"great read"}
+ Alice Johnson   | {"Distinctly average","blew my mind",slow}
+ Isaac Walker    | {ok,"scary one"}
+ Felix Morgan    | {"Bit boring","beautiful read","must read"}
+ Benjamin Carter | {"too long","slow and boring"}
+ David Thompson  | {"Best book ever","great concept, slow read","interesting concept, but not enjoyable","timeless classic"}
+ Hannah Kim      | {"difficult read"}
+ Grace Patel     | {unrealistic,"heartwarming romance"}
+(8 rows)
+
+    user_name    | round 
+-----------------+-------
+ Julia Bennett   |  8.00
+ Alice Johnson   |  6.33
+ Isaac Walker    |  6.50
+ Felix Morgan    |  6.33
+ Benjamin Carter |  2.00
+ David Thompson  |  8.50
+ Hannah Kim      |  4.00
+ Grace Patel     |  5.50
+(8 rows)
+
+ user_id |    user_name    |              book_title              
+---------+-----------------+--------------------------------------
+       1 | Alice Johnson   | The Hitchhiker's Guide to the Galaxy
+       1 | Alice Johnson   | Nineteen Eighty-Four: A Novel
+       1 | Alice Johnson   | Pride and Prejudice
+       4 | David Thompson  | The Hitchhiker's Guide to the Galaxy
+       4 | David Thompson  | Nineteen Eighty-Four: A Novel
+       4 | David Thompson  | The Handmaid's Tale
+       4 | David Thompson  | Pride and Prejudice
+       9 | Isaac Walker    | The Little Prince
+       9 | Isaac Walker    | The Handmaid's Tale
+       6 | Felix Morgan    | The Hitchhiker's Guide to the Galaxy
+       6 | Felix Morgan    | The Little Prince
+       6 | Felix Morgan    | The Handmaid's Tale
+       8 | Hannah Kim      | Nineteen Eighty-Four: A Novel
+       7 | Grace Patel     | The Handmaid's Tale
+       7 | Grace Patel     | Pride and Prejudice
+       2 | Benjamin Carter | The War of the Worlds
+       2 | Benjamin Carter | Pride and Prejudice
+      10 | Julia Bennett   | The War of the Worlds
+(18 rows)
+

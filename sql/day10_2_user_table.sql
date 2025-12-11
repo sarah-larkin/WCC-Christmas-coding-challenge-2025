@@ -47,19 +47,19 @@ ALTER TABLE reviews
 --populate values
 UPDATE reviews
 SET user_id = (SELECT user_id FROM users WHERE user_name = 'Alice Johnson')
-WHERE review_id IN (2,3,7,8,18);
+WHERE review_id IN (2,7,18);
 
 UPDATE reviews
 SET user_id = (SELECT user_id FROM users WHERE user_name = 'David Thompson')
-WHERE review_id IN (1,11,16);
+WHERE review_id IN (1,8,11,16);
 
 UPDATE reviews
 SET user_id = (SELECT user_id FROM users WHERE user_name = 'Isaac Walker')
-WHERE review_id IN (4,9,12);
+WHERE review_id IN (4,12);
 
 UPDATE reviews
 SET user_id = (SELECT user_id FROM users WHERE user_name = 'Felix Morgan')
-WHERE review_id IN (5);
+WHERE review_id IN (3,5,9);
 
 UPDATE reviews
 SET user_id = (SELECT user_id FROM users WHERE user_name = 'Hannah Kim')

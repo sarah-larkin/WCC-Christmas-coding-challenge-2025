@@ -19,10 +19,10 @@ INSERT 0 10
 ALTER TABLE
 ALTER TABLE
 ALTER TABLE
-UPDATE 5
 UPDATE 3
+UPDATE 4
+UPDATE 2
 UPDATE 3
-UPDATE 1
 UPDATE 1
 UPDATE 2
 UPDATE 2
@@ -30,17 +30,17 @@ UPDATE 1
  review_id | rating |                 review                 | book_id | user_id 
 -----------+--------+----------------------------------------+---------+---------
          2 |      5 | Distinctly average                     |       1 |       1
-         3 |      2 | Bit boring                             |       1 |       1
          7 |     10 | blew my mind                           |       5 |       1
-         8 |      8 | great concept, slow read               |       5 |       1
         18 |      4 | slow                                   |      10 |       1
          1 |     10 | Best book ever                         |       1 |       4
+         8 |      8 | great concept, slow read               |       5 |       4
         11 |      6 | interesting concept, but not enjoyable |       6 |       4
         16 |     10 | timeless classic                       |      10 |       4
          4 |      4 | ok                                     |       2 |       9
-         9 |     10 | must read                              |       6 |       9
         12 |      9 | scary one                              |       6 |       9
+         3 |      2 | Bit boring                             |       1 |       6
          5 |      7 | beautiful read                         |       2 |       6
+         9 |     10 | must read                              |       6 |       6
          6 |      4 | difficult read                         |       5 |       8
         10 |      3 | unrealistic                            |       6 |       7
         17 |      8 | heartwarming romance                   |      10 |       7
