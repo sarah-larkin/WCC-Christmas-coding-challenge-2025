@@ -1,0 +1,30 @@
+You are now connected to database "bookshop" as user "slark".
+    user_name    |              book_title              
+-----------------+--------------------------------------
+ Alice Johnson   | The Hitchhiker's Guide to the Galaxy
+ Alice Johnson   | Nineteen Eighty-Four: A Novel
+ Alice Johnson   | Pride and Prejudice
+ David Thompson  | The Hitchhiker's Guide to the Galaxy
+ David Thompson  | Nineteen Eighty-Four: A Novel
+ David Thompson  | The Handmaid's Tale
+ David Thompson  | Pride and Prejudice
+ Isaac Walker    | The Little Prince
+ Isaac Walker    | The Handmaid's Tale
+ Felix Morgan    | The Hitchhiker's Guide to the Galaxy
+ Felix Morgan    | The Little Prince
+ Felix Morgan    | The Handmaid's Tale
+ Hannah Kim      | Nineteen Eighty-Four: A Novel
+ Grace Patel     | The Handmaid's Tale
+ Grace Patel     | Pride and Prejudice
+ Benjamin Carter | The War of the Worlds
+ Benjamin Carter | Pride and Prejudice
+ Julia Bennett   | The War of the Worlds
+(18 rows)
+
+        book_title        
+--------------------------
+ The Little Prince
+ The Tale of Peter Rabbit
+ The War of the Worlds
+(3 rows)
+

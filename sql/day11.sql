@@ -31,7 +31,7 @@ GROUP BY u.user_name;
 
 SELECT
     u.user_name,
-    ROUND(AVG(r.rating),2)
+    ROUND(AVG(r.rating),2) AS average_rating
 FROM users u
 INNER JOIN reviews r 
 ON u.user_id = r.user_id
@@ -40,17 +40,3 @@ GROUP BY u.user_name;
 
 
 
--- List books that a user has not reviewed.
------------------------------------------------
-
--- -- all books a user HAS reviewed
--- SELECT
---     u.user_id,
---     u.user_name,
---     b.book_title
--- FROM books b
--- JOIN reviews r ON b.book_id = r.book_id
--- JOIN users u ON r.user_id = u.user_id;
-
-
--- try with left join tomorrow 
