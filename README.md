@@ -22,3 +22,4 @@ Challenge organised through Women Coding Community. Practice coding challenges f
 - Day 10: added run-all script, query reviews, add users table, add user_ids to reviews
 - Day 11: query reviews
 - Day 12: anti-join - finding missing relationships/things that don't match
+- Day 13: create agent table and query
