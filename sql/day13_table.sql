@@ -18,7 +18,7 @@ CREATE TABLE agents (
     agent_name VARCHAR(50),
     author_name VARCHAR(50),
     author_contact_details TEXT,
-    author_revenue FLOAT
+    author_revenue INT              -- should not use float for money
 );
 
 INSERT INTO agents 
