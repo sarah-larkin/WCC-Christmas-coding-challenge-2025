@@ -24,3 +24,4 @@ Challenge organised through Women Coding Community. Practice coding challenges f
 - Day 12: anti-join - finding missing relationships/things that don't match
 - Day 13: create agent table and query
 - Day 14: alter and query agents table 
+- Day 15: querying tables using joins
