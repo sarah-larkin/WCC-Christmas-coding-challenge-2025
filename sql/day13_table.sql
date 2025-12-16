@@ -27,10 +27,11 @@ VALUES
     ('Galactic Literary Agency', 'Douglas Adams', 'douglas@email.com', 89900),
     ('Prince Literary Services', 'Antoine de Saint-Exupéry', 'antoine@email.com', 69900),
     ('Rabbit Representation', 'Beatrix Potter', 'beatrix@email.com', 59900),
+    ('Rabbit Representation', 'Roald Dahl', 'roald@email.com', 69900),
     ('Austen Authors Agency', 'Jane Austen', 'jane@email.com', 52200),
     ('Orwell Literary Management', 'George Orwell', 'george@email.com', 79900),
     ('Galactic Literary Agency', 'Stephen Hawking', 'stephen@email.com', 67900),
-    ('Galactic Literary Agency', 'H. G. Wells ', 'wells@email.com', 93900)
+    ('Galactic Literary Agency', 'H. G. Wells', 'wells@email.com', 93900)
     ;
 
         --  1 | Dan Brown                       

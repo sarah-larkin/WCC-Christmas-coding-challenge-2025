@@ -1,17 +1,18 @@
 You are now connected to database "bookshop" as user "slark".
 ALTER TABLE
-UPDATE 7
-UPDATE 7
+UPDATE 8
+UPDATE 8
  agent_id |         agent_name         |       author_name        | author_contact_details | author_revenue | agent_fee_in_pence 
 ----------+----------------------------+--------------------------+------------------------+----------------+--------------------
         1 | Galactic Literary Agency   | Douglas Adams            | douglas@email.com      |          89900 |              13485
         2 | Prince Literary Services   | Antoine de Saint-Exupéry | antoine@email.com      |          69900 |               6990
         3 | Rabbit Representation      | Beatrix Potter           | beatrix@email.com      |          59900 |               5990
-        4 | Austen Authors Agency      | Jane Austen              | jane@email.com         |          52200 |               7830
-        5 | Orwell Literary Management | George Orwell            | george@email.com       |          79900 |               7990
-        6 | Galactic Literary Agency   | Stephen Hawking          | stephen@email.com      |          67900 |              10185
-        7 | Galactic Literary Agency   | H. G. Wells              | wells@email.com        |          93900 |              14085
-(7 rows)
+        4 | Rabbit Representation      | Roald Dahl               | roald@email.com        |          69900 |               6990
+        5 | Austen Authors Agency      | Jane Austen              | jane@email.com         |          52200 |               7830
+        6 | Orwell Literary Management | George Orwell            | george@email.com       |          79900 |               7990
+        7 | Galactic Literary Agency   | Stephen Hawking          | stephen@email.com      |          67900 |              10185
+        8 | Galactic Literary Agency   | H. G. Wells              | wells@email.com        |          93900 |              14085
+(8 rows)
 
       agent_name       
 -----------------------
@@ -20,6 +21,6 @@ UPDATE 7
 
  average_agent_fee | average_author_revenue 
 -------------------+------------------------
-           9507.86 |               73371.43
+           9193.13 |               72937.50
 (1 row)
 

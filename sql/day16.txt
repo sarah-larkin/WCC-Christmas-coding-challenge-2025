@@ -1,0 +1,20 @@
+You are now connected to database "bookshop" as user "slark".
+         agent_name         | total_books 
+----------------------------+-------------
+ Austen Authors Agency      |           4
+ Galactic Literary Agency   |         577
+ Orwell Literary Management |         420
+ Prince Literary Services   |        1020
+ Rabbit Representation      |        1000
+(5 rows)
+
+       author_name        |         agent_name         | average_book_price 
+--------------------------+----------------------------+--------------------
+ H. G. Wells              | Galactic Literary Agency   |             225.00
+ Beatrix Potter           | Rabbit Representation      |             539.00
+ Jane Austen              | Austen Authors Agency      |             699.00
+ George Orwell            | Orwell Literary Management |             719.00
+ Douglas Adams            | Galactic Literary Agency   |             809.00
+ Antoine de Saint-Exupéry | Prince Literary Services   |             629.00
+(6 rows)
+

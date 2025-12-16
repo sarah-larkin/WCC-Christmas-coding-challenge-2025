@@ -25,3 +25,4 @@ Challenge organised through Women Coding Community. Practice coding challenges f
 - Day 13: create agent table and query
 - Day 14: alter and query agents table 
 - Day 15: querying tables using joins
+- Day 16: querying tables using joins

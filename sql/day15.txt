@@ -2,11 +2,12 @@ You are now connected to database "bookshop" as user "slark".
        author_name        |         agent_name         |              book_title              | release_date 
 --------------------------+----------------------------+--------------------------------------+--------------
  Jane Austen              | Austen Authors Agency      | Pride and Prejudice                  | 1813-01-28
+ H. G. Wells              | Galactic Literary Agency   | The War of the Worlds                | 1897-04-01
  Beatrix Potter           | Rabbit Representation      | The Tale of Peter Rabbit             | 1902-10-01
  Antoine de Saint-Exupéry | Prince Literary Services   | The Little Prince                    | 1943-04-06
  George Orwell            | Orwell Literary Management | Nineteen Eighty-Four: A Novel        | 1949-06-08
  Douglas Adams            | Galactic Literary Agency   | The Hitchhiker's Guide to the Galaxy | 1997-10-12
-(5 rows)
+(6 rows)
 
  author_contact_details |   genre    
 ------------------------+------------
@@ -16,10 +17,11 @@ You are now connected to database "bookshop" as user "slark".
 
        author_name        |         agent_name         | count 
 --------------------------+----------------------------+-------
+ H. G. Wells              | Galactic Literary Agency   |     1
  Beatrix Potter           | Rabbit Representation      |     1
  Antoine de Saint-Exupéry | Prince Literary Services   |     1
  George Orwell            | Orwell Literary Management |     1
  Douglas Adams            | Galactic Literary Agency   |     1
  Jane Austen              | Austen Authors Agency      |     1
-(5 rows)
+(6 rows)
 
