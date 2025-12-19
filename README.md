@@ -28,3 +28,4 @@ Challenge organised through Women Coding Community. Practice coding challenges f
 - Day 16: querying tables using joins
 - Day 17: querying tables using joins
 - Day 18: created new database to work with - recipebook
+- Day 19: 

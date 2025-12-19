@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS recipes_ingredients(
     ingredient_id INT REFERENCES ingredients(ingredient_id)
 );
 
-
+\echo "Courses table"
 INSERT INTO courses(
     course_name
 )
@@ -52,6 +52,7 @@ VALUES
 
 SELECT * FROM courses;
 
+\echo "Categories table"
 INSERT INTO categories(
     category_name
 )
@@ -65,6 +66,7 @@ VALUES
 
 SELECT * FROM categories;
 
+\echo "Ingredients table"
 INSERT INTO ingredients(
     ingredient_name
 )
@@ -89,6 +91,7 @@ VALUES
 
 SELECT * FROM ingredients;
 
+\echo "Recipes table"
 INSERT INTO recipes(
     recipe_name
 )
@@ -99,6 +102,7 @@ VALUES
 
 SELECT * FROM recipes;
 
+\echo "recipes_ingredients table"
 INSERT INTO recipes_ingredients(
     recipe_id, ingredient_id
 )
