@@ -61,9 +61,9 @@ INSERT 0 17
 INSERT 0 3
  recipe_id |   recipe_name    | course_id | category_id 
 -----------+------------------+-----------+-------------
-         1 | minestrone soup  |           |            
-         2 | pepperoni pizza  |           |            
-         3 | pistachio gelato |           |            
+         1 | minestrone soup  |         1 |           5
+         2 | pepperoni pizza  |         2 |           2
+         3 | pistachio gelato |         3 |           6
 (3 rows)
 
 "recipes_ingredients table"

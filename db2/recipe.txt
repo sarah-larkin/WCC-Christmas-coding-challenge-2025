@@ -1,1 +1,6 @@
 You are now connected to database "recipebook" as user "slark".
+   recipe_name   
+-----------------
+ minestrone soup
+(1 row)
+

@@ -2,6 +2,15 @@
 
 -- Find all the recipes that use all of a certain set of ingredients.
 
+SELECT recipes.recipe_name
+FROM recipes 
+JOIN recipes_ingredients ON recipes.recipe_id = recipes_ingredients.recipe_id
+JOIN ingredients ON recipes_ingredients.ingredient_id = ingredients.ingredient_id
+WHERE ingredients.ingredient_id IN (11,15)
+GROUP BY recipes.recipe_id--, recipes.recipe_name
+HAVING COUNT(DISTINCT recipes_ingredients.ingredient_id) = 2;
+
+
 
 
 -- Find all the recipes which use one or more of a certain set of ingredients.

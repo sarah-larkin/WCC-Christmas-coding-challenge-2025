@@ -93,12 +93,14 @@ SELECT * FROM ingredients;
 
 \echo "Recipes table"
 INSERT INTO recipes(
-    recipe_name
+    recipe_name,
+    course_id,
+    category_id
 )
 VALUES
-    ('minestrone soup'),
-    ('pepperoni pizza'),
-    ('pistachio gelato');
+    ('minestrone soup', 1, 5),
+    ('pepperoni pizza', 2, 2),
+    ('pistachio gelato', 3, 6);
 
 SELECT * FROM recipes;
 
@@ -122,4 +124,3 @@ VALUES
 
 SELECT * FROM recipes_ingredients;
 
--- add course_id and category_id to recipes table
