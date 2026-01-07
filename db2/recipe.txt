@@ -4,3 +4,19 @@ You are now connected to database "recipebook" as user "slark".
  minestrone soup
 (1 row)
 
+   recipe_name   
+-----------------
+ minestrone soup
+ pepperoni pizza
+(2 rows)
+
+       recipe_name       |                                              ingredients                                               
+-------------------------+--------------------------------------------------------------------------------------------------------
+ calzone pizza           | {salt,pepperoni,mushroom,garlic,ham,tomato,flour,"mozzarella cheese"}
+ chicago deep-dish pizza | {tomato,"mozzarella cheese",chicken,pepperoni,ham,mushroom,flour}
+ four cheeses pizza      | {basil,tomato,"parmesan cheese","gorgonzola cheese","fontina cheese",garlic,"mozzarella cheese",flour}
+ margherita pizza        | {tomato,flour,"mozzarella cheese",garlic}
+ pepperoni pizza         | {flour,"mozzarella cheese",pepperoni,tomato,water}
+ seafood pizza           | {tomato,mushroom,tuna,"mozzarella cheese",flour}
+(6 rows)
+

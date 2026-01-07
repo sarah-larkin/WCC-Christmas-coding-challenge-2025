@@ -75,7 +75,7 @@ VALUES
     ('basil'),
     ('flour'),
     ('egg'),
-    ('mozzarella'),
+    ('mozzarella cheese'),
     ('tuna'),
     ('chicken'),
     ('cream'),
@@ -87,7 +87,15 @@ VALUES
     ('olive oil'),
     ('minestrone'),
     ('pepperoni'),
-    ('sugar');
+    ('sugar'),
+    ('mushroom'),
+    ('garlic'),
+    ('steak'),
+    ('ham'),
+    ('gorgonzola cheese'),
+    ('parmesan cheese'),
+    ('fontina cheese')
+    ;
 
 SELECT * FROM ingredients;
 
@@ -100,7 +108,12 @@ INSERT INTO recipes(
 VALUES
     ('minestrone soup', 1, 5),
     ('pepperoni pizza', 2, 2),
-    ('pistachio gelato', 3, 6);
+    ('pistachio gelato', 3, 6),
+    ('calzone pizza', 2, 2),
+    ('seafood pizza', 2, 2),
+    ('margherita pizza', 2, 2),
+    ('chicago deep-dish pizza', 2, 2),
+    ('four cheeses pizza', 2, 2);
 
 SELECT * FROM recipes;
 
@@ -120,7 +133,40 @@ VALUES
     (2, 5),
     (3, 10),
     (3, 8),
-    (3, 17);
+    (3, 17),
+    (4, 1),
+    (4, 3),
+    (4, 5),
+    (4, 13),
+    (4, 16),
+    (4, 18),
+    (4, 19),
+    (4, 21),
+    (5, 1),
+    (5, 3),
+    (5, 5),
+    (5, 6),
+    (5, 18),
+    (6, 1),
+    (6, 3),
+    (6, 5),
+    (6, 19),
+    (7, 1),
+    (7, 3),
+    (7, 5),
+    (7, 7),
+    (7, 16),
+    (7, 18),
+    (7, 21),
+    (8, 1),
+    (8, 2),
+    (8, 3),
+    (8, 5),
+    (8, 19),
+    (8, 22),
+    (8, 23),
+    (8, 24)
+    ;
 
 SELECT * FROM recipes_ingredients;
 

@@ -1,21 +1,31 @@
 You are now connected to database "recipebook" as user "slark".
-   recipe_name   |                 array_agg                 
------------------+-------------------------------------------
- pepperoni pizza | {flour,water,tomato,pepperoni,mozzarella}
+   recipe_name   |                     array_agg                      
+-----------------+----------------------------------------------------
+ pepperoni pizza | {flour,water,tomato,pepperoni,"mozzarella cheese"}
 (1 row)
 
 UPDATE 2
 UPDATE 1
- recipe_id |   recipe_name    | course_id | category_id 
------------+------------------+-----------+-------------
-         1 | minestrone soup  |         2 |           5
-         2 | pepperoni pizza  |         2 |           2
-         3 | pistachio gelato |         3 |           6
-(3 rows)
+ recipe_id |       recipe_name       | course_id | category_id 
+-----------+-------------------------+-----------+-------------
+         4 | calzone pizza           |         2 |           2
+         5 | seafood pizza           |         2 |           2
+         6 | margherita pizza        |         2 |           2
+         7 | chicago deep-dish pizza |         2 |           2
+         8 | four cheeses pizza      |         2 |           2
+         1 | minestrone soup         |         2 |           5
+         2 | pepperoni pizza         |         2 |           2
+         3 | pistachio gelato        |         3 |           6
+(8 rows)
 
- course_name |   recipe_name   
--------------+-----------------
+ course_name |       recipe_name       
+-------------+-------------------------
+ main        | calzone pizza
+ main        | seafood pizza
+ main        | margherita pizza
+ main        | chicago deep-dish pizza
+ main        | four cheeses pizza
  main        | minestrone soup
  main        | pepperoni pizza
-(2 rows)
+(7 rows)
 
