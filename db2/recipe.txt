@@ -10,13 +10,10 @@ You are now connected to database "recipebook" as user "slark".
  pepperoni pizza
 (2 rows)
 
-       recipe_name       |   ingredients   
--------------------------+-----------------
- four cheeses pizza      | {garlic,tomato}
- calzone pizza           | {tomato,garlic}
- seafood pizza           | {tomato}
- margherita pizza        | {tomato,garlic}
- pepperoni pizza         | {tomato}
- chicago deep-dish pizza | {tomato}
-(6 rows)
+    recipe_name     |                                              ingredients                                               
+--------------------+--------------------------------------------------------------------------------------------------------
+ pepperoni pizza    | {flour,"mozzarella cheese",pepperoni,tomato,water}
+ four cheeses pizza | {basil,tomato,"parmesan cheese","gorgonzola cheese","fontina cheese",garlic,"mozzarella cheese",flour}
+ margherita pizza   | {tomato,flour,"mozzarella cheese",garlic}
+(3 rows)
 

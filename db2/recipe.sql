@@ -41,22 +41,29 @@ FROM recipes
 JOIN recipes_ingredients ON recipes.recipe_id = recipes_ingredients.recipe_id
 JOIN ingredients ON recipes_ingredients.ingredient_id = ingredients.ingredient_id
 WHERE recipes.category_id = 2  --pizzas
-AND 
-    -- ingredients.ingredient_name LIKE '%garlic%' OR
-    -- ingredients.ingredient_name LIKE '%tomato%'
-    ingredients.ingredient_id IN (19, 1)
 GROUP BY recipes.recipe_name
+HAVING
+    SUM(CASE 
+        WHEN ingredients.ingredient_id IN (1, 19) THEN 1
+        ELSE 0 
+    END) > 0
+    
+EXCEPT
 
-EXCEPT --exclude
-
-SELECT
+SELECT 
     recipes.recipe_name,
     ARRAY_AGG(ingredients.ingredient_name) AS ingredients
 FROM recipes
 JOIN recipes_ingredients ON recipes.recipe_id = recipes_ingredients.recipe_id
 JOIN ingredients ON recipes_ingredients.ingredient_id = ingredients.ingredient_id
-WHERE ingredients.ingredient_name LIKE '%mushroom%'
-GROUP BY recipes.recipe_name;
+WHERE recipes.category_id = 2  --pizzas
+GROUP BY recipes.recipe_name
+HAVING
+    SUM(CASE 
+        WHEN ingredients.ingredient_id IN (18) THEN 1
+        ELSE 0 
+    END) > 0;
+
 
 -- NEXT: add the filtering 
 -- CHECK: HAVING / EXISTS??? 
