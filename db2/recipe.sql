@@ -62,9 +62,42 @@ AND SUM(CASE WHEN ingredients.ingredient_id IN (18) THEN 1 ELSE 0 END) = 0; -- h
 
 -- add new table "methods" (without dropping the db)
 -- adjust the current tables (preserve original data)
+-- ingredients can be cooked using a variety of methods depending on the dish
+-- each method can be used on any number of ingredients
 ----------------------------------------------------------------------------------------
 
+DROP TABLE IF EXISTS methods;
 
+CREATE TABLE if NOT EXISTS methods(
+    method_id SERIAL PRIMARY KEY,
+    method_name VARCHAR(50)
+);
+
+\echo "methods table"
+INSERT INTO methods
+    (method_name)
+VALUES
+    ('fry'),
+    ('boil'),
+    ('roast'),
+    ('bake'),
+    ('poach'),
+    ('whisk'),
+    ('mix'),
+    ('chop'),
+    ('slice'),
+    ('melt'),
+    ('grate');
+
+SELECT * FROM methods;
+
+SELECT * FROM ingredients
+ORDER BY ingredient_id;
+
+ALTER TABLE IF EXISTS recipes_ingredients
+    ADD COLUMN IF NOT EXISTS method_id INT;
+-- continue here add values into method_id
+SELECT * FROM recipes_ingredients;
 
 
 
