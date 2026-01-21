@@ -34,39 +34,29 @@ GROUP BY recipes.recipe_name;
 -- tomato   - 1
 -- mushroom - 18
 
-SELECT 
-    recipes.recipe_name,
-    ARRAY_AGG(ingredients.ingredient_name) AS ingredients
-FROM recipes
-JOIN recipes_ingredients ON recipes.recipe_id = recipes_ingredients.recipe_id
-JOIN ingredients ON recipes_ingredients.ingredient_id = ingredients.ingredient_id
-WHERE recipes.category_id = 2  --pizzas
-GROUP BY recipes.recipe_name
-HAVING
-    SUM(CASE 
-        WHEN ingredients.ingredient_id IN (1, 19) THEN 1
-        ELSE 0 
-    END) > 0
-    
-EXCEPT
+-- need to filter at recipe level not row level!! 
 
 SELECT 
     recipes.recipe_name,
-    ARRAY_AGG(ingredients.ingredient_name) AS ingredients
-FROM recipes
+    ARRAY_AGG(ingredients.ingredient_name)
+FROM recipes 
 JOIN recipes_ingredients ON recipes.recipe_id = recipes_ingredients.recipe_id
 JOIN ingredients ON recipes_ingredients.ingredient_id = ingredients.ingredient_id
-WHERE recipes.category_id = 2  --pizzas
+WHERE recipes.category_id = 2 --pizza
 GROUP BY recipes.recipe_name
-HAVING
-    SUM(CASE 
-        WHEN ingredients.ingredient_id IN (18) THEN 1
-        ELSE 0 
-    END) > 0;
+HAVING 
+--filter by the number of times the ingredients appear, not by the indgredients themselves
+--if you filter by ingredients, all other ingredients get filtered out so mushroom can never exist
+    SUM(CASE WHEN ingredients.ingredient_id IN (1,19) THEN 1 ELSE 0 END) > 0 --having SUM(condition > 1) ie. one is present 
+AND SUM(CASE WHEN ingredients.ingredient_id IN (18) THEN 1 ELSE 0 END) = 0; -- having SUM(condition = 0) ie not present
+-- CASE like if-elif-else in python
 
 
--- NEXT: add the filtering 
--- CHECK: HAVING / EXISTS??? 
+-- CHECK: 
+--      HAVING / EXISTS --> SQL HAVING conditional aggregation
+--      Why NOT IN doesn't work here 
+--      typical EXCEPT use cases 
+--      set based SQL / declarative SQL 
 
 
 

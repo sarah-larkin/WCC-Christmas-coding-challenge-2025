@@ -10,10 +10,10 @@ You are now connected to database "recipebook" as user "slark".
  pepperoni pizza
 (2 rows)
 
-    recipe_name     |                                              ingredients                                               
+    recipe_name     |                                               array_agg                                                
 --------------------+--------------------------------------------------------------------------------------------------------
- pepperoni pizza    | {flour,"mozzarella cheese",pepperoni,tomato,water}
  four cheeses pizza | {basil,tomato,"parmesan cheese","gorgonzola cheese","fontina cheese",garlic,"mozzarella cheese",flour}
  margherita pizza   | {tomato,flour,"mozzarella cheese",garlic}
+ pepperoni pizza    | {flour,"mozzarella cheese",pepperoni,tomato,water}
 (3 rows)
 
