@@ -87,18 +87,73 @@ VALUES
     ('chop'),
     ('slice'),
     ('melt'),
-    ('grate');
+    ('grate'),
+    ('season'),
+    ('blend'),
+    ('break apart / sprinkle');
 
 SELECT * FROM methods;
 
 SELECT * FROM ingredients
 ORDER BY ingredient_id;
 
+-- add column: 
 ALTER TABLE IF EXISTS recipes_ingredients
     ADD COLUMN IF NOT EXISTS method_id INT;
--- continue here add values into method_id
-SELECT * FROM recipes_ingredients;
 
+SELECT * FROM recipes
+ORDER BY recipe_id;
+
+-- updated column values: 
+UPDATE recipes_ingredients
+SET method_id = 2 -- boil
+WHERE recipe_ingredient_id IN (1,2,3); -- ministroni soup recipe_ingredient_id
+
+UPDATE recipes_ingredients
+SET method_id = 7 -- mix
+WHERE ingredient_id IN (3, 11) -- flour, water
+    AND recipe_id IN (SELECT recipes.recipe_id FROM recipes WHERE recipe_name LIKE '%pizza%');
+
+UPDATE recipes_ingredients
+SET method_id = 12 -- season
+WHERE ingredient_id = 13; -- salt
+
+UPDATE recipes_ingredients
+SET method_id = 8 -- chop
+WHERE ingredient_id IN (1, 21, 19) -- tomato, ham, garlic
+    AND recipe_id IN (SELECT recipes.recipe_id FROM recipes WHERE recipe_name LIKE '%pizza%');
+
+UPDATE recipes_ingredients
+SET method_id =  9 -- slice
+WHERE ingredient_id IN (5, 16, 18, 22, 24) -- mozzarella, pepperoni, mushroom, gorgonzola cheese, fontina cheese
+    AND recipe_id IN (SELECT recipes.recipe_id FROM recipes WHERE recipe_name LIKE '%pizza%');
+
+UPDATE recipes_ingredients
+SET method_id = 6 -- whisk
+WHERE ingredient_id IN (8, 17) -- cream, sugar 
+    AND recipe_id IN (SELECT recipes.recipe_id FROM recipes WHERE recipe_name LIKE '%gelato%');
+
+UPDATE recipes_ingredients
+SET method_id = 13 -- blend
+WHERE ingredient_id IN (10) -- pistachio
+    AND recipe_id IN (SELECT recipes.recipe_id FROM recipes WHERE recipe_name LIKE '%gelato%');
+
+UPDATE recipes_ingredients
+SET method_id = 14 -- break apart/sprinkle
+WHERE ingredient_id IN (2, 6, 7) -- basil, tuna, chicken(assumed cooked)
+    AND recipe_id IN (SELECT recipes.recipe_id FROM recipes WHERE recipe_name LIKE '%pizza%');
+
+UPDATE recipes_ingredients
+SET method_id = 11 -- grate
+WHERE ingredient_id = 23; -- parmesan cheese
+
+
+SELECT * FROM recipes_ingredients
+ORDER BY recipe_ingredient_id;
+
+-- check 
+-- set based updates, 
+-- data/driven design/(lookup/mapping) tables instead of UPDATE
 
 
 
