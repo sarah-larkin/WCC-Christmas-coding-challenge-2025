@@ -93,13 +93,13 @@ VALUES
     ('break apart / sprinkle');
 
 --view relevant tables 
-SELECT * FROM methods;
+-- SELECT * FROM methods;
 
-SELECT * FROM ingredients
-ORDER BY ingredient_id;
+-- SELECT * FROM ingredients
+-- ORDER BY ingredient_id;
 
-SELECT * FROM recipes
-ORDER BY recipe_id;
+-- SELECT * FROM recipes
+-- ORDER BY recipe_id;
 
 -- add column: 
 ALTER TABLE IF EXISTS recipes_ingredients
@@ -185,17 +185,28 @@ WHERE ingredient_id = 23; -- parmesan cheese
 SELECT * FROM recipes_ingredients
 ORDER BY recipe_ingredient_id;
 
-
-
-
--- check 
--- set based updates, 
--- data/driven design/(lookup/mapping) tables instead of UPDATE
-
-
-
 -- queries: 
+--------------
 -- Find all of the methods used in starters.
+---------------------------------------------------
+
+UPDATE recipes
+SET course_id = (SELECT course_id FROM courses WHERE course_name = 'starter')
+WHERE recipe_id IN (1) ;
+
+SELECT
+    methods.method_name,
+    courses.course_name,
+    recipes.recipe_name
+FROM methods
+JOIN recipes_ingredients ON  methods.method_id = recipes_ingredients.method_id
+JOIN recipes  ON recipes_ingredients.recipe_id = recipes.recipe_id
+JOIN courses ON recipes.course_id = courses.course_id
+WHERE courses.course_name = 'starter'
+GROUP BY methods.method_name, courses.course_name, recipes.recipe_name;
+
+
+
 -- Find all of the ingredients that use a specific method.
 -- Find all of the ingredients that use more than 2 methods.
 -- Find all of the ingredients for a specific recipe and the relevant methods used for those ingredients

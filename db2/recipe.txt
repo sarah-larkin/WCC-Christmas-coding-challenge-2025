@@ -21,64 +21,6 @@ DROP TABLE
 CREATE TABLE
 "methods table"
 INSERT 0 14
- method_id |      method_name       
------------+------------------------
-         1 | fry
-         2 | boil
-         3 | roast
-         4 | bake
-         5 | poach
-         6 | whisk
-         7 | mix
-         8 | chop
-         9 | slice
-        10 | melt
-        11 | grate
-        12 | season
-        13 | blend
-        14 | break apart / sprinkle
-(14 rows)
-
- ingredient_id |  ingredient_name  
----------------+-------------------
-             1 | tomato
-             2 | basil
-             3 | flour
-             4 | egg
-             5 | mozzarella cheese
-             6 | tuna
-             7 | chicken
-             8 | cream
-             9 | chocolate
-            10 | pistachio
-            11 | water
-            12 | semolina
-            13 | salt
-            14 | olive oil
-            15 | minestrone
-            16 | pepperoni
-            17 | sugar
-            18 | mushroom
-            19 | garlic
-            20 | steak
-            21 | ham
-            22 | gorgonzola cheese
-            23 | parmesan cheese
-            24 | fontina cheese
-(24 rows)
-
- recipe_id |       recipe_name       | course_id | category_id 
------------+-------------------------+-----------+-------------
-         1 | minestrone soup         |         2 |           5
-         2 | pepperoni pizza         |         2 |           2
-         3 | pistachio gelato        |         3 |           6
-         4 | calzone pizza           |         2 |           2
-         5 | seafood pizza           |         2 |           2
-         6 | margherita pizza        |         2 |           2
-         7 | chicago deep-dish pizza |         2 |           2
-         8 | four cheeses pizza      |         2 |           2
-(8 rows)
-
 ALTER TABLE
 UPDATE 3
 UPDATE 7
@@ -136,4 +78,11 @@ UPDATE 1
                    43 |         8 |            23 |        11
                    44 |         8 |            24 |         9
 (44 rows)
+
+UPDATE 1
+ method_name | course_name |   recipe_name   
+-------------+-------------+-----------------
+ boil        | starter     | minestrone soup
+ season      | starter     | minestrone soup
+(2 rows)
 
