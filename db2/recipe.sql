@@ -92,17 +92,18 @@ VALUES
     ('blend'),
     ('break apart / sprinkle');
 
+--view relevant tables 
 SELECT * FROM methods;
 
 SELECT * FROM ingredients
 ORDER BY ingredient_id;
 
+SELECT * FROM recipes
+ORDER BY recipe_id;
+
 -- add column: 
 ALTER TABLE IF EXISTS recipes_ingredients
     ADD COLUMN IF NOT EXISTS method_id INT;
-
-SELECT * FROM recipes
-ORDER BY recipe_id;
 
 -- updated column values: 
 UPDATE recipes_ingredients
@@ -147,9 +148,45 @@ UPDATE recipes_ingredients
 SET method_id = 11 -- grate
 WHERE ingredient_id = 23; -- parmesan cheese
 
+-- alternative
+---------------
+
+-- UPDATE recipes_ingredients  -- table to update 
+-- SET 
+--     method_id = 
+--                 CASE 
+--                     WHEN r.recipe_name LIKE '%pizza%' 
+--                     AND i.ingredient_name IN ('flour', 'water')
+--                     THEN 7
+--                     END
+-- -- where you get all the input data from (run first): 
+-- FROM recipes r -- FROM and WHERE joins recipes to recipes_ingredients
+-- JOIN recipes_ingredients ri ON r.recipe_id = ri.recipe_id -- joining ri junction table (same as table being updated)
+-- JOIN ingredients i ON ri.ingredient_id = i.ingredient_id -- joining ingredients
+-- -- every row will be updated with either 1) the output a the CASE statement or 2) null 
+-- -- based on the recipe_ingredient_id matching in the table being updated and the joined reference tables 
+-- -- where table to update unique id = joined tables you are getting data from unique id (match on every row) 
+-- WHERE recipes_ingredients.recipe_ingredient_id = ri.recipe_ingredient_id;
+
+-- UPDATE recipes_ingredients ri -- can only reference this table in (SET or) WHERE clause (not JOIN)
+-- SET method_id = 
+--                 CASE
+--                     WHEN r.recipe_name LIKE '%pizza%'
+--                     AND i.ingredient_name IN ('flour', 'water')
+--                     THEN 7
+--                     ELSE ri.method_id --keeps previous input rather than overwriting with null
+--                 END               
+-- FROM recipes r
+-- JOIN ingredients i ON TRUE -- check this further 
+-- WHERE ri.recipe_id = r.recipe_id
+--  AND ri.ingredient_id = i.ingredient_id;
+
 
 SELECT * FROM recipes_ingredients
 ORDER BY recipe_ingredient_id;
+
+
+
 
 -- check 
 -- set based updates, 

@@ -67,7 +67,6 @@ INSERT 0 14
             24 | fontina cheese
 (24 rows)
 
-ALTER TABLE
  recipe_id |       recipe_name       | course_id | category_id 
 -----------+-------------------------+-----------+-------------
          1 | minestrone soup         |         2 |           5
@@ -80,6 +79,7 @@ ALTER TABLE
          8 | four cheeses pizza      |         2 |           2
 (8 rows)
 
+ALTER TABLE
 UPDATE 3
 UPDATE 7
 UPDATE 2
