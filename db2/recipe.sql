@@ -93,13 +93,13 @@ VALUES
     ('break apart / sprinkle');
 
 --view relevant tables 
--- SELECT * FROM methods;
+SELECT * FROM methods;
 
--- SELECT * FROM ingredients
--- ORDER BY ingredient_id;
+SELECT * FROM ingredients
+ORDER BY ingredient_id;
 
--- SELECT * FROM recipes
--- ORDER BY recipe_id;
+SELECT * FROM recipes
+ORDER BY recipe_id;
 
 -- add column: 
 ALTER TABLE IF EXISTS recipes_ingredients
@@ -208,5 +208,60 @@ GROUP BY methods.method_name, courses.course_name, recipes.recipe_name;
 
 
 -- Find all of the ingredients that use a specific method.
--- Find all of the ingredients that use more than 2 methods.
--- Find all of the ingredients for a specific recipe and the relevant methods used for those ingredients
+---------------------------------------------------------------
+
+SELECT 
+    methods.method_name,
+    ingredients.ingredient_name
+FROM
+    ingredients 
+JOIN recipes_ingredients ON ingredients.ingredient_id = recipes_ingredients.ingredient_id
+JOIN methods ON recipes_ingredients.method_id = methods.method_id
+WHERE methods.method_id = 8 -- chop
+GROUP BY methods.method_name, ingredients.ingredient_name;
+
+
+-- Find all of the ingredients that use more than 1 method.
+-------------------------------------------------------------
+SELECT 
+    ingredients.ingredient_name,
+    ARRAY_AGG(methods.method_name) AS methods,
+    COUNT(DISTINCT methods.method_name) AS total_methods
+FROM
+    ingredients 
+JOIN recipes_ingredients ON ingredients.ingredient_id = recipes_ingredients.ingredient_id
+JOIN methods ON recipes_ingredients.method_id = methods.method_id
+GROUP BY  ingredients.ingredient_name
+HAVING COUNT(DISTINCT methods.method_name) > 1; 
+
+-- NOTE: 
+-- when filtering rows --> WHERE 
+-- when filtering groupds --> HAVING 
+
+-- SQL execution order: 
+-- FROM
+-- JOIN
+-- WHERE - row level filtering 
+-- GROUP BY
+-- HAVING - group level filtering - aliases in SELECT statement do not exist yet so cannot be used
+-- SELECT
+-- ORDER BY
+
+
+
+-- Find all of the ingredients for a specific recipe and the relevant 
+-- methods used for those ingredients
+----------------------------------------------------------------------
+
+SELECT
+    recipes.recipe_name,
+    ingredients.ingredient_name,
+    methods.method_name
+FROM
+    recipes
+JOIN recipes_ingredients ON recipes.recipe_id = recipes_ingredients.recipe_id
+JOIN methods ON recipes_ingredients.method_id = methods.method_id
+JOIN ingredients ON recipes_ingredients.ingredient_id = ingredients.ingredient_id
+WHERE recipes.recipe_name = 'pepperoni pizza';
+
+
